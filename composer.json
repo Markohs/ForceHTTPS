@@ -1,7 +1,7 @@
 {
     "name": "markohs/forcehttps",
-    "description": ":package_description",
-    "license": "license",
+    "description": "Simple Laravel Middleware to force HTTPS connections",
+    "license": "MIT",
     "authors": [
         {
             "name": "author name",
