@@ -3,6 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
+[![StyleCI](https://styleci.io/repos/237038709/shield?branch=master)](https://styleci.io/repos/237038709)
 [![StyleCI][ico-styleci]][link-styleci]
 
 Simple Laravel Middleware to force HTTPS usage on your clients, with a simple whitelist system. Take a look at [contributing.md](contributing.md) to see a to do list.
