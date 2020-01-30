@@ -2,7 +2,10 @@
 
 All notable changes to `ForceHTTPS` will be documented in this file.
 
-## Version 1.0
+## Version 0.0.1
 
 ### Added
-- Everything
+- Initial Release
+
+## Version 0.0.2
+- Fixed documentation

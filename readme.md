@@ -17,7 +17,7 @@ $ composer require markohs/forcehttps
 
 Publish the default config file:
 ```
-$  php artisan vendor:publish --tag=forcehttps
+$  php artisan vendor:publish --tag=forcehttps.config
 ```
 
 You can now edit default settings in config/forcehttps.php
@@ -40,14 +40,16 @@ You can also use the automatic MiddlewareGroup register mechanism in `config/for
 Or you can add the Middleware manually as usual in `app/Http/Kernel.php` in the MiddlewareGroups you require:
 
 ```php
-        'web' => [
-            \App\Http\Middleware\EncryptCookies::class,
 ...
-			\Markohs\ForceSSL\Middleware\ForceHTTPS::class,
+'web' => [
+    \App\Http\Middleware\EncryptCookies::class,
 ...
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        ],
+    \Markohs\ForceSSL\Middleware\ForceHTTPS::class,
+...
+
+    \Illuminate\Routing\Middleware\SubstituteBindings::class,
+],
+..
 ```
 
 ## URL whitelist mechanism
