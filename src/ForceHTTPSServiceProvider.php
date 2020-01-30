@@ -2,10 +2,9 @@
 
 namespace Markohs\ForceHTTPS;
 
-use Markohs\ForceHTTPS\Middleware\ForceHTTPS;
-
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
+use Markohs\ForceHTTPS\Middleware\ForceHTTPS;
 
 class ForceHTTPSServiceProvider extends ServiceProvider
 {
@@ -22,13 +21,13 @@ class ForceHTTPSServiceProvider extends ServiceProvider
 
         $router->middleware('forcehttps', 'Markohs\ForceHTTPS\Middleware\ForceHTTPS');
 
-        if(config('forcehttps.autoregister')==null){
+        if (config('forcehttps.autoregister') == null) {
             // Avoid complex situations on config:cache and production apps
             return;
         }
 
-        foreach (config('forcehttps.autoregister') as $group ){
-            $router->pushMiddlewareToGroup($group,ForceHTTPS::class);
+        foreach (config('forcehttps.autoregister') as $group) {
+            $router->pushMiddlewareToGroup($group, ForceHTTPS::class);
         }
     }
 
@@ -51,7 +50,7 @@ class ForceHTTPSServiceProvider extends ServiceProvider
     {
         return ['forcehttps'];
     }
-    
+
     /**
      * Console-specific booting.
      *
