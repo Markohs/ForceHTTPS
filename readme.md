@@ -1,8 +1,7 @@
-# ForceSSL
+# ForceHTTPS
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
 [![StyleCI](https://styleci.io/repos/237038709/shield?branch=master)](https://styleci.io/repos/237038709)
 [![StyleCI][ico-styleci]][link-styleci]
 
@@ -94,7 +93,6 @@ MIT. Please see the [license file](license.md) for more information.
 
 [link-packagist]: https://packagist.org/packages/markohs/forcehttps
 [link-downloads]: https://packagist.org/packages/markohs/forcehttps
-[link-travis]: https://travis-ci.org/markohs/forcehttps
 [link-styleci]: https://styleci.io/repos/237038709
 [link-author]: https://github.com/markohs
 [link-contributors]: ../../contributors
