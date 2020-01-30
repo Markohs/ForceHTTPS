@@ -64,6 +64,12 @@ You can set this url whitelist in  `config/forcehttps.php`:
 
 ```
 
+## Important notes
+
+If you are using Cloudflare or some kind of proxy to serve your website, you need to make sure you configure Truested Proxies correctly or this Middleware will cause infinite redirect loops.
+
+Make sure you keep app\Http\Middleware\TrustProxies.php , variable $proxies, up to date. or on the config file /config/trustedproxy.php
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
