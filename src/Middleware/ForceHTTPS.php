@@ -16,14 +16,14 @@ class ForceHTTPS
      */
     public function handle($request, Closure $next)
     {
-        if (! $request->secure() && App::environment(config('forcehttps.envs_enabled')) && ! $this->urlExcluded($request)) {
+        if (! $request->secure() && App::environment(config('forcehttps.envs_enabled')) && ! $this->isWhitelisted($request)) {
             return redirect()->secure($request->getRequestUri());
         }
 
         return $next($request);
     }
 
-    private function urlExcluded($request)
+    private function isWhitelisted($request)
     {
         if (config('forcehttps.whitelist_url') == null) {
             return false;

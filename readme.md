@@ -94,6 +94,6 @@ MIT. Please see the [license file](license.md) for more information.
 [link-packagist]: https://packagist.org/packages/markohs/forcehttps
 [link-downloads]: https://packagist.org/packages/markohs/forcehttps
 [link-travis]: https://travis-ci.org/markohs/forcehttps
-[link-styleci]: https://styleci.io/repos/12345678
+[link-styleci]: https://styleci.io/repos/237038709
 [link-author]: https://github.com/markohs
 [link-contributors]: ../../contributors
