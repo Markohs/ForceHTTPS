@@ -51,13 +51,23 @@ Or you can add the Middleware manually as usual in `app/Http/Kernel.php` in the 
 ..
 ```
 
-## URL whitelist mechanism
+### Set active environments
+
+This package will only be active in the environments you specify, by default `stage`, `prod` and `production`, update `config/forcehttps.php` if necessary:
+
+```php
+    'envs_enabled' => ['stage', 'prod', 'production'],
+```
+
+
+
+### URL whitelist mechanism
 
 This package also has a path exclusion mechanism I found useful in my projects. Even if a request is affected by this Middleware, a list of paths is checked, in a "whitelist" spirit, those URLS won't emit a 301 HTTP redirect. I use for comunitaction with other traditional systems that use old POST fashion, and don't support HTTPS.
 
 You can set this url whitelist in  `config/forcehttps.php`:
 ```php
-	'exception_url' => [
+    'whitelist_url' => [
         'example/url',
         'example2'
     ],
@@ -66,9 +76,9 @@ You can set this url whitelist in  `config/forcehttps.php`:
 
 ## Important notes
 
-If you are using Cloudflare or some kind of proxy to serve your website, you need to make sure you configure Truested Proxies correctly or this Middleware will cause infinite redirect loops.
+If you are using Cloudflare or some kind of proxy to serve your website, you need to make sure you configure Truested Proxies correctly *or this Middleware will cause redirect loops*.
 
-Make sure you keep app\Http\Middleware\TrustProxies.php , variable $proxies, up to date. or on the config file /config/trustedproxy.php
+Make sure you keep `app\Http\Middleware\TrustProxies.php` , variable `$proxies`, up to date. Or the config file `/config/trustedproxy.php`
 
 ## Change log
 
