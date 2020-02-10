@@ -16,6 +16,7 @@ class ForceHTTPS
      */
     public function handle($request, Closure $next)
     {
+
         if (! $request->secure() && App::environment(config('forcehttps.envs_enabled')) && ! $this->isWhitelisted($request)) {
             return redirect()->secure($request->getRequestUri());
         }
@@ -25,6 +26,7 @@ class ForceHTTPS
 
     private function isWhitelisted($request)
     {
+
         if (config('forcehttps.whitelist_url') == null) {
             return false;
         }

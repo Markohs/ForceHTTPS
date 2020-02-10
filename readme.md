@@ -3,6 +3,8 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![StyleCI][ico-styleci]][link-styleci]
+[![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 Simple Laravel Middleware to force HTTPS usage on your clients, with a simple whitelist system. Take a look at [contributing.md](contributing.md) to see a to do list.
 
@@ -48,7 +50,7 @@ Or you can add the Middleware manually as usual in `app/Http/Kernel.php` in the 
 
     \Illuminate\Routing\Middleware\SubstituteBindings::class,
 ],
-..
+...
 ```
 
 ### Set active environments
@@ -76,7 +78,7 @@ You can set this url whitelist in  `config/forcehttps.php`:
 
 If you are using Cloudflare or some kind of proxy to serve your website, you need to make sure you configure TrustedProxy correctly *or this Middleware will cause redirect loops*.
 
-Make sure you keep `app\Http\Middleware\TrustProxies.php` , variable `$proxies`, up to date. Or the config file `/config/trustedproxy.php`
+Make sure you keep the config file `/config/trustedproxy.php`, or on `app\Http\Middleware\TrustProxies.php` , variable `$proxies`, up to date. Or 
 
 ## Change log
 
@@ -88,7 +90,7 @@ Please see [contributing.md](contributing.md) for details and a todolist.
 
 ## Security
 
-If you discover any security related issues, please email marcos@tyrellcorporation.es instead of using the issue tracker.
+If you discover any security related issues, or want to help improve this package, please email marcos@tyrellcorporation.es or use the issue tracker or send a PR.
 
 ## Credits
 
