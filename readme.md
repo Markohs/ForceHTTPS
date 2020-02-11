@@ -63,7 +63,7 @@ Or you can add the Middleware manually as usual in `app/Http/Kernel.php` in the 
 This package will only be active in the environments you specify, by default `stage`, `prod` and `production`, update `config/forcehttps.php` if necessary:
 
 ```php
-    'envs_enabled' => ['stage', 'prod', 'production'],
+    'enabled_environments' => ['stage', 'prod', 'production'],
 ```
 
 ### URL whitelist mechanism
@@ -72,7 +72,7 @@ This package also has a path exclusion mechanism I found useful in my projects. 
 
 You can set this url whitelist in  `config/forcehttps.php`:
 ```php
-    'whitelist_url' => [
+    'whitelist' => [
         'example/url',
         'example2'
     ],
