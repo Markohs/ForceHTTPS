@@ -10,7 +10,7 @@
         }
     ],
     "homepage": "https://github.com/markohs/forcehttps",
-    "keywords": ["Laravel", "ForceHTTPS"],
+    "keywords": ["Laravel", "ForceHTTPS", "https" , "Middleware"],
     "require": {
         "illuminate/support": "~5|~6"
     },

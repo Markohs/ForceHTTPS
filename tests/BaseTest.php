@@ -6,11 +6,11 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class BaseTest extends Orchestra
 {
-    protected function setUp():void
+    protected function setUp(): void
     {
-    	parent::setUp();
+        parent::setUp();
 
-    	$this->setUpDummyRoutes();
+        $this->setUpDummyRoutes();
     }
 
     protected function getPackageProviders($app)
@@ -20,7 +20,6 @@ abstract class BaseTest extends Orchestra
 
     protected function setUpDummyRoutes()
     {
-
         $this->app['router']->get('test', ['uses' => function () {
             return 'hello world';
         }]);
@@ -28,7 +27,5 @@ abstract class BaseTest extends Orchestra
         $this->app['router']->get('test_forced', ['uses' => function () {
             return 'hello world';
         }])->middleware('Markohs\ForceHTTPS\Middleware\ForceHTTPS');
-
     }
-
 }
