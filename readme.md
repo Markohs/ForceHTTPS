@@ -1,5 +1,6 @@
 # ForceHTTPS
 
+[![Build Status](https://travis-ci.org/Markohs/ForceHTTPS.svg?branch=master)](https://travis-ci.org/Markohs/ForceHTTPS)
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![StyleCI][ico-styleci]][link-styleci]
@@ -22,6 +23,10 @@ $  php artisan vendor:publish --tag=forcehttps.config
 ```
 
 You can now edit default settings in config/forcehttps.php
+
+## Requirements
+
+This package is just tested with Laravel 6.0
 
 ## Usage
 
