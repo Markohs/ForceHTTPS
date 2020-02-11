@@ -16,7 +16,7 @@ class ForceHTTPS
      */
     public function handle($request, Closure $next)
     {
-        if (! $request->secure() && App::environment(config('forcehttps.envs_enabled')) && ! $this->isWhitelisted($request)) {
+        if (! $request->secure() && App::environment(config('forcehttps.enabled_environments')) && ! $this->isWhitelisted($request)) {
             return redirect()->secure($request->getRequestUri());
         }
 
@@ -25,11 +25,11 @@ class ForceHTTPS
 
     private function isWhitelisted($request)
     {
-        if (config('forcehttps.whitelist_url') == null) {
+        if (config('forcehttps.whitelist') == null) {
             return false;
         }
 
-        $regex = '#'.implode('|', config('forcehttps.whitelist_url')).'#';
+        $regex = '#'.implode('|', config('forcehttps.whitelist')).'#';
 
         return preg_match($regex, $request->path());
     }
