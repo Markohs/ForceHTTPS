@@ -26,7 +26,7 @@ You can now edit default settings in config/forcehttps.php
 
 ## Requirements
 
-This package is just tested with Laravel 6.0
+This package is just tested with Laravel 6.0 and 8.0
 
 ## Usage
 
